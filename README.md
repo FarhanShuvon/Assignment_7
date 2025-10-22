@@ -18,16 +18,3 @@ Lift state up to a common parent component and pass it down as props, or use sta
 
 ### 5. How is event handling done in React?
 Event handling in React is done by passing event handler functions as props to elements using camelCase syntax like `onClick={handleClick}`[web:129].
-
-## Features
-- Ticket management system
-- Real-time status tracking (In-Progress/Resolved)
-- React-Toastify notifications
-- Fully responsive design
-- Dynamic ticket counts
-
-## Technologies Used
-- React
-- Tailwind CSS
-- React-Toastify
-- React Icons
