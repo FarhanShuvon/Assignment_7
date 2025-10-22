@@ -2,8 +2,9 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <nav className="bg-gray-100 border-b-2 border-gray-300 px-8 py-4">
-            <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <nav className="bg-gray-100 border-b-2 border-gray-300 px-8 py-4 ">
+            <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+
 
                 <div className="text-xl font-semibold text-black">
                     CS — Ticket System

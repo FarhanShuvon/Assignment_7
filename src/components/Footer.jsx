@@ -7,10 +7,8 @@ const Footer = () => {
     <footer className="bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 py-12 lg:py-16">
         
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-8 text-center sm:text-left">
           
-          {/* Company Info */}
           <div className="lg:col-span-1">
             <h2 className="text-xl font-semibold mb-4">CS — Ticket System</h2>
             <p className="text-gray-400 text-sm leading-relaxed">
@@ -18,7 +16,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Company Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
@@ -84,23 +81,23 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Social Links - SIMPLE VERSION */}
+          {/* Social Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Social Links</h3>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-gray-400">
+              <li className="flex items-center gap-2 text-gray-400 justify-center sm:justify-start">
                 <FaTwitter className="text-xl" />
                 <span className="text-sm">@CS — Ticket System</span>
               </li>
-              <li className="flex items-center gap-2 text-gray-400">
+              <li className="flex items-center gap-2 text-gray-400 justify-center sm:justify-start">
                 <FaLinkedin className="text-xl" />
                 <span className="text-sm">@CS — Ticket System</span>
               </li>
-              <li className="flex items-center gap-2 text-gray-400">
+              <li className="flex items-center gap-2 text-gray-400 justify-center sm:justify-start">
                 <FaFacebook className="text-xl" />
                 <span className="text-sm">@CS — Ticket System</span>
               </li>
-              <li className="flex items-center gap-2 text-gray-400">
+              <li className="flex items-center gap-2 text-gray-400 justify-center sm:justify-start">
                 <MdEmail className="text-xl" />
                 <span className="text-sm">support@cst.com</span>
               </li>
