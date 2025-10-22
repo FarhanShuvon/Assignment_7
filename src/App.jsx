@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Navbar from './components/navbar.jsx'
 import Banner from './components/Banner.jsx'
 import TicketList from './components/TicketList.jsx'
+import Footer from './components/Footer.jsx'
 
 function App() {
   const [inProgressCount, setInProgressCount] = useState(0);
@@ -19,6 +20,7 @@ function App() {
         setInProgressCount={setInProgressCount}
         setResolvedCount={setResolvedCount}
       />
+      <Footer></Footer>
     </>
   )
 }
