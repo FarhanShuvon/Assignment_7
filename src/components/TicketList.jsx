@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 const TicketList = ({ setInProgressCount, setResolvedCount }) => {
   const [allTickets, setAllTickets] = useState([]);
@@ -16,11 +17,11 @@ const TicketList = ({ setInProgressCount, setResolvedCount }) => {
       })
       .catch(error => {
         console.error('Error fetching tickets:', error);
+        toast.error('Failed to load tickets!');
         setLoading(false);
       });
   }, []);
 
-  // Update counts whenever taskStatusTickets or resolvedTickets change
   useEffect(() => {
     setInProgressCount(taskStatusTickets.length);
   }, [taskStatusTickets, setInProgressCount]);
@@ -80,6 +81,15 @@ const TicketList = ({ setInProgressCount, setResolvedCount }) => {
   const handleAddToTaskStatus = (ticket) => {
     if (!taskStatusTickets.find(t => t.id === ticket.id)) {
       setTaskStatusTickets([...taskStatusTickets, ticket]);
+      toast.info(`"${ticket.title}" added to Task Status!`, {
+        position: "top-right",
+        autoClose: 2000,
+      });
+    } else {
+      toast.warning('This ticket is already in Task Status!', {
+        position: "top-right",
+        autoClose: 2000,
+      });
     }
   };
 
@@ -89,6 +99,11 @@ const TicketList = ({ setInProgressCount, setResolvedCount }) => {
       setTaskStatusTickets(taskStatusTickets.filter(t => t.id !== ticketId));
       setResolvedTickets([...resolvedTickets, { ...ticket, status: 'Resolved' }]);
       setAllTickets(allTickets.filter(t => t.id !== ticketId));
+      
+      toast.success(`"${ticket.title}" marked as resolved! ✅`, {
+        position: "top-right",
+        autoClose: 3000,
+      });
     }
   };
 

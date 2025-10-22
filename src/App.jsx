@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import Navbar from './components/navbar.jsx'
 import Banner from './components/Banner.jsx'
@@ -11,7 +13,7 @@ function App() {
 
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <Banner
         inProgressCount={inProgressCount}
         resolvedCount={resolvedCount}
@@ -20,7 +22,21 @@ function App() {
         setInProgressCount={setInProgressCount}
         setResolvedCount={setResolvedCount}
       />
-      <Footer></Footer>
+      <Footer />
+      
+      {/* Toast Container */}
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </>
   )
 }
