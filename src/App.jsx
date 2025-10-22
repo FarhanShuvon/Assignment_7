@@ -2,10 +2,10 @@ import { useState } from 'react'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-import Navbar from './components/navbar.jsx'
 import Banner from './components/Banner.jsx'
 import TicketList from './components/TicketList.jsx'
 import Footer from './components/Footer.jsx'
+import Navbar from './components/Navbar.jsx'
 
 function App() {
   const [inProgressCount, setInProgressCount] = useState(0);
